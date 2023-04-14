@@ -1,0 +1,14 @@
+Library/
+.vs/
+Logs/
+.idea/
+obj/
+UserSettings/
+.vsconfig
+Assembly-CSharp.csproj
+README.md
+Lv99_GAMEJAM.sln
+UserSettings/Layouts/default-2021.dwlt
+Logs/shadercompiler-UnityShaderCompiler.exe0.log
+Assembly-CSharp.csproj
+Assembly-CSharp-Editor.csproj
