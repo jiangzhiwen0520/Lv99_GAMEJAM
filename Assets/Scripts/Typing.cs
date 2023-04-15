@@ -56,8 +56,14 @@ public class Typing : MonoBehaviour
                     Debug.Log("更新位置");
 
                     TMP_CharacterInfo charInfo = textInfo.characterInfo[currentCharIndex - 1];
-                    float cursorXPos = charInfo.topRight.x-160;
-                    float cursorYPos = charInfo.bottomLeft.y+13;
+                    //float cursorXPos = charInfo .topRight.x-367;
+                    //float cursorYPos = charInfo.bottomLeft.y+40;
+
+                    float charWidth = charInfo.xAdvance; // 获取字符的宽度
+                    float cursorXPos = charInfo.bottomLeft.x + charWidth; // 将字符宽度加到光标的X坐标上
+                    float cursorYPos = charInfo.bottomLeft.y; // 保持光标的Y坐标不变
+
+
                     int lineIndex = charInfo.lineNumber;
 
                     if (lineIndex > 0)
@@ -67,6 +73,8 @@ public class Typing : MonoBehaviour
                     Debug.Log(cursorXPos);
                     Debug.Log(cursorYPos);
                     cursorRectTransform.anchoredPosition = new Vector2(cursorXPos, cursorYPos);
+                   
+
                 }
             }
         }
