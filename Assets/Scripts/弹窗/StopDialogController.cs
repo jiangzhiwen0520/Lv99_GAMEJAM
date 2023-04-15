@@ -49,10 +49,8 @@ public class StopDialogController : MonoBehaviour
         //GameObject.Find("–ßπ˚“Ù–ß").GetComponent<AudioContonller>().SetAudio(0);
         GameObject g = GameObject.FindWithTag("PauseDialog");
         //Debug.Log("MouseClick");
-        if (GameObject.FindGameObjectWithTag("ShockDialog") == null) { 
-            Time.timeScale = 1;
-        }
-        Destroy(g);
+        Time.timeScale = 1;
+        g.SetActive(false);
 
     }
     public void MouseClickQ()
