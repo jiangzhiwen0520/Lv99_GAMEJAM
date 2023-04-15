@@ -21,6 +21,8 @@ public class PreesureController : MonoBehaviour
     private bool m_cd;
     private bool m_breath;
     private bool m_downcd;
+
+    public bool isAP;
     void Start()
     {
         if(textObject !=null)
@@ -44,8 +46,9 @@ public class PreesureController : MonoBehaviour
     }
     void Controller()
     {
-        if ((Input.GetKey(KeyCode.Space) || m_breath) && !m_cd)
+        if ((Input.GetKey(KeyCode.Space) || m_breath) && !m_cd&&!isAP)
         {
+            
             float pretime = m_downtime >= 1 ? m_downtime : 1;
             m_downtime += Time.deltaTime;
             if (m_downtime >= 1)//开始呼吸
@@ -73,6 +76,7 @@ public class PreesureController : MonoBehaviour
             {
                 m_uptime = 0;
             }
+
             if (m_cd && (!Input.GetKey(KeyCode.Space) || m_downcd))//必须松开空格才能开始刷新cd，防止一直按着空格
             {
                 m_downcd = true;
