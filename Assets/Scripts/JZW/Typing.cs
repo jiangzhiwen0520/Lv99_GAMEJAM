@@ -19,6 +19,8 @@ public class Typing : MonoBehaviour
     public float blinkDuration = 0.75f;
     private bool isBlinking;
 
+    public GameObject pressureController;
+    public float failDuration = 0.1f;
 
     // Start is called before the first frame update
     void Start()
@@ -40,15 +42,18 @@ public class Typing : MonoBehaviour
         targetText = targetText.Replace("<color=#FFFFFF>", "");
         targetText = targetText.Replace("</color>", "");
         char currentChar = targetText [currentCharIndex];
+
+
         if (Input.GetKeyDown((KeyCode)((int)currentChar + 32)))
         {
+            pressureController.GetComponent<PreesureController>().Award(2);
             if (currentCharIndex < targetText.Length)
             {
                 Debug.Log("按下按键");
                 typedText.text += currentChar;
-                currentCharIndex++; 
+                currentCharIndex++;
                 StartCoroutine(BlinkChar());
-                
+
                 //ChangeColorAt(currentCharIndex, newColor);
 
             }
@@ -56,8 +61,18 @@ public class Typing : MonoBehaviour
             {
                 Debug.Log("输入已满");
             }
-            
+
         }
+        else if (Input.anyKeyDown&&!Input.GetMouseButtonDown(0)&& !Input.GetMouseButtonDown(1) && !Input.GetMouseButtonDown(2)&&!Input.GetKeyDown(KeyCode.Space) && !Input.GetKeyDown((KeyCode)((int)currentChar + 32)))
+        {
+            Debug.Log("fail");
+            pressureController.GetComponent<PreesureController>().Punishment(2);
+            StartCoroutine(fail());
+
+        }
+
+
+
 
     }
 
@@ -90,5 +105,14 @@ public class Typing : MonoBehaviour
                 isBlinking = false;
             }
         }
+    }
+    private IEnumerator fail()
+    {
+        originalText.text = targetText.Substring(0, currentCharIndex) + "<color=#FF0000>" + targetText[currentCharIndex] + "</color>" + targetText.Substring(currentCharIndex + 1);
+        yield return new WaitForSeconds(failDuration);
+
+        originalText.text = targetText;
+        
+
     }
 }
