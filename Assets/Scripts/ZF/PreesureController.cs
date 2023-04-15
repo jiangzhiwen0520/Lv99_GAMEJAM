@@ -6,7 +6,7 @@ using UnityEngine;
 public class PreesureController : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject textObject;
+    //public GameObject textObject;
     [Header("呼吸的下降幅度")]
     public float descender;
     [Header("时间的上升幅度")]
@@ -25,8 +25,8 @@ public class PreesureController : MonoBehaviour
     public bool isAP;
     void Start()
     {
-        if(textObject !=null)
-            m_textMesh = textObject.GetComponent<TextMeshProUGUI>();
+        //if (textObject != null)
+        //    m_textMesh = textObject.GetComponent<TextMeshProUGUI>();
         m_downtime = 0;
         m_uptime = 0;
         m_cdtime = 0;
