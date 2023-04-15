@@ -8,6 +8,7 @@ TagManager:
   - PauseDialog
   - BallEnd
   - Border
+  - Canvas
   layers:
   - Default
   - TransparentFX

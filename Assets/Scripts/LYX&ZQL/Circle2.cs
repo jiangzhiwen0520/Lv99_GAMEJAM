@@ -31,13 +31,7 @@ public class Circle2 : MonoBehaviour
 
     void Update()
     {
-        //Cursor.visible = false;
-        if ((Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1))&&!pause)
-        {
-            isstart = !isstart;
-            timeDown = true;
-
-        }
+        
 
         if (isstart)
         {
@@ -115,6 +109,16 @@ public class Circle2 : MonoBehaviour
             pause = true;
             Time.timeScale = 0;
             gameOver.SetActive(true);
+        }
+    }
+    private void OnMouseOver()
+    {
+        //Cursor.visible = false;
+        if ((Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1)) && !pause&&Time.timeScale!=0)
+        {
+            isstart = !isstart;
+            timeDown = true;
+            
         }
     }
 }
