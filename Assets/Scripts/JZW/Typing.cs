@@ -22,10 +22,11 @@ public class Typing : MonoBehaviour
     public GameObject pressureController;
     public float failDuration = 0.1f;
 
+    private char currentChar;
     // Start is called before the first frame update
     void Start()
     {
-        targetText = "AABBFFCCCCCCCCCCCCCCCC";
+        targetText = "key words、My pronunciation also";
         currentCharIndex = 0;
         originalText.text = targetText;
         typedText.text = "";       
@@ -41,15 +42,19 @@ public class Typing : MonoBehaviour
 
         targetText = targetText.Replace("<color=#FFFFFF>", "");
         targetText = targetText.Replace("</color>", "");
-        char currentChar = targetText [currentCharIndex];
+        if (currentCharIndex < targetText.Length)
+        {
+            currentChar= targetText[currentCharIndex];
+        }
 
 
-        if (Input.GetKeyDown((KeyCode)((int)currentChar + 32)))
+
+        if (Input.GetKeyDown((KeyCode)((int)currentChar ))|| Input.GetKeyDown((KeyCode)((int)currentChar+32)))
         {
             pressureController.GetComponent<PreesureController>().Award(2);
             if (currentCharIndex < targetText.Length)
             {
-                Debug.Log("按下按键");
+                //Debug.Log("按下按键");
                 typedText.text += currentChar;
                 currentCharIndex++;
                 StartCoroutine(BlinkChar());
@@ -59,7 +64,24 @@ public class Typing : MonoBehaviour
             }
             else
             {
-                Debug.Log("输入已满");
+                //Debug.Log("输入已满");
+                GameObject.Find("生气老师(Clone)").GetComponent<AngryState>().enabled = false;
+                GameObject.Find("AS").GetComponent<SpriteRenderer>().enabled = false;
+                GameObject.Find("AS").GetComponent<Angry>().enabled = false;
+                GameObject.Find("AM").GetComponent<SpriteRenderer>().enabled = false;
+                GameObject.Find("AM").GetComponent<Angry>().enabled = false;
+                GameObject.Find("AB").GetComponent<SpriteRenderer>().enabled = false;
+                GameObject.Find("AB").GetComponent<Angry>().enabled = false;
+
+                GameObject.Find("花1").GetComponent<SpriteRenderer>().enabled = true;
+                GameObject.Find("花1").GetComponent<Angry>().enabled = true;
+                GameObject.Find("花2").GetComponent<SpriteRenderer>().enabled = true;
+                GameObject.Find("花2").GetComponent<Angry>().enabled = true;
+                GameObject.Find("花3").GetComponent<SpriteRenderer>().enabled = true;
+                GameObject.Find("花3").GetComponent<Angry>().enabled = true;
+                GameObject.Find("花4").GetComponent<SpriteRenderer>().enabled = true;
+                GameObject.Find("花4").GetComponent<Angry>().enabled = true;
+
             }
 
         }
@@ -101,7 +123,7 @@ public class Typing : MonoBehaviour
             }
             else
             {
-                Debug.LogError("Character index is out of range.");
+                //Debug.LogError("Character index is out of range.");
                 isBlinking = false;
             }
         }
