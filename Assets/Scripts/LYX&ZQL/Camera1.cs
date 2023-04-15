@@ -38,11 +38,11 @@ public class Camera1 : MonoBehaviour
 
         float disNervous = nervous - preNervous;
        
-        cvCamera.m_Lens.OrthographicSize -= 0.02f * disNervous;
+        //cvCamera.m_Lens.OrthographicSize -= 0.02f * disNervous;
         //Debug.Log(cvCamera.m_Lens.OrthographicSize);
         if (nervous >= 50.0)
         {
-            noise.m_AmplitudeGain = 1f;
+            noise.m_AmplitudeGain = (nervous-50f)/50f;
         }
         else
         {

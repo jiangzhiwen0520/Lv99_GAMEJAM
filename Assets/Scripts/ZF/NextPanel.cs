@@ -25,6 +25,7 @@ public class NextPanel : MonoBehaviour
                 nextLevelScene = "Scene_04";
             }
             SceneManager.LoadScene(nextLevelScene);
+            Time.timeScale = 1;
         });
         btn_quit.onClick.AddListener(() =>
         {
