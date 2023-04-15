@@ -30,7 +30,7 @@ public class TumourCut : MonoBehaviour
     {
         if (numOfVessel == 0) {
             //StartCoroutine("Shack");
-            //MyDestory();
+            MyDestory();
             Debug.Log("手术成功");
         }
     }
