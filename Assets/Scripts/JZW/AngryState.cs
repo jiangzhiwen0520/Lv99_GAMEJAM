@@ -25,8 +25,11 @@ public class AngryState : MonoBehaviour
         aValue= gameObject.GetComponent<PreesureController>().GetPressurePoint();
         if (aValue > 0 && aValue < 50)
         {
+            //if (GameObject.Find("AudioController").GetComponent<AudioController>().GetIdx() != 0)
+            //{
+            //    GameObject.Find("AudioController").GetComponent<AudioController>().PlayAudio(0);
+            //}
             
-            GameObject.Find("AudioController").GetComponent<AudioController>().PlayAudio(0);
             GameObject.Find("AS").GetComponent<SpriteRenderer>().enabled = false;
             GameObject.Find("AS").GetComponent<Angry>().enabled = false;
             GameObject.Find("AM").GetComponent<SpriteRenderer>().enabled = false;
@@ -37,7 +40,10 @@ public class AngryState : MonoBehaviour
         else if (aValue < 100)
         {
             //GameObject.Find("AudioController").GetComponent<AudioController>().PlayAudio(0);
-            
+            //if (GameObject.Find("AudioController").GetComponent<AudioController>().GetIdx() != 0)
+            //{
+            //    GameObject.Find("AudioController").GetComponent<AudioController>().PlayAudio(0);
+            //}
             GameObject.Find("AS").GetComponent<SpriteRenderer>().enabled = true;
             GameObject.Find("AS").GetComponent<Angry>().enabled = true;
             GameObject.Find("AM").GetComponent<SpriteRenderer>().enabled = false;

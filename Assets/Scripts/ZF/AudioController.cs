@@ -5,10 +5,9 @@ using UnityEngine;
 
 public class AudioController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    [Header("��Ƶ��ԴƬ��")]
     public AudioClip[] audioClips;
     private AudioSource m_audioSource;
+    private int m_i = 0;
     void Start()
     {
         m_audioSource = GetComponent<AudioSource>();
@@ -17,21 +16,22 @@ public class AudioController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     public void PlayAudio(int i)
     {
         m_audioSource.PlayOneShot(audioClips[i]);
+        m_i = i;
     }
 
-    public void PlayAudio(int i,float a)
+    public void PlayAudio(int i, float a)
     {
-        m_audioSource.PlayOneShot(audioClips[i],a);
+        m_audioSource.PlayOneShot(audioClips[i], a);
+        m_i = i;
     }
 
-    internal void Stop()
+    public int GetIdx()
     {
-        throw new NotImplementedException();
-
+        return m_i;
     }
 }

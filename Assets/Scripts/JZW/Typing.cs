@@ -182,7 +182,7 @@ public class Typing : MonoBehaviour
                 }
                 else
                 {
-                    if (page >= 3)
+                    if (page >= 1)
                     {
                         typedText.text += currentChar;
                         //Debug.Log("ÊäÈëÒÑÂú");

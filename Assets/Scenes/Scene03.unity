@@ -244,7 +244,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5251657247996366360, guid: e3bcdfcc751fa164287724d26f4fe1ee, type: 3}
       propertyPath: increase
-      value: 20
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5251657247996366361, guid: e3bcdfcc751fa164287724d26f4fe1ee, type: 3}
       propertyPath: m_RootOrder
