@@ -35,7 +35,7 @@ public class EyelidCloseEffect : MonoBehaviour
 
     public IEnumerator OpenEyelids(float time)
     {
-        Debug.Log("еібл");
+        //Debug.Log("еібл");
         float progress = 0f;
         
         Vector2 closedPosition = Vector2.zero;
