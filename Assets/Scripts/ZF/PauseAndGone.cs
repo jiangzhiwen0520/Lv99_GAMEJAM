@@ -20,6 +20,10 @@ public class PauseAndGone : MonoBehaviour
     }
     public void OnPauseClickDown()
     {
+        Debug.Log("œÏ”¶");
+        if (Input.GetKey(KeyCode.Space))
+            return;
+
         GameObject.Find("AudioController").GetComponent<AudioController>().PlayAudio(5);
         GameObject.Find("Main Camera").GetComponent<AudioListener>().enabled = !GameObject.Find("Main Camera").GetComponent<AudioListener>().enabled;
         i = 1 - i;

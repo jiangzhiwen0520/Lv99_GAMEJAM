@@ -1356,8 +1356,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.7904792, y: 0.89822227}
   m_AnchorMax: {x: 0.7904792, y: 0.89822227}
-  m_AnchoredPosition: {x: 19.3, y: -16}
-  m_SizeDelta: {x: 43.0399, y: 59.2924}
+  m_AnchoredPosition: {x: 18.1623, y: -16}
+  m_SizeDelta: {x: 51.4938, y: 59.2924}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &406907140
 MonoBehaviour:
@@ -5209,8 +5209,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
-
-
 --- !u!1 &1851632310
 GameObject:
   m_ObjectHideFlags: 0
@@ -5919,15 +5917,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8929051885435631075, guid: 746408ac7eb609c4a87d0b2d7a6bc794, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.9085608
+      value: -7.0896406
       objectReference: {fileID: 0}
     - target: {fileID: 8929051885435631075, guid: 746408ac7eb609c4a87d0b2d7a6bc794, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.9031487
+      value: -2.5625086
       objectReference: {fileID: 0}
     - target: {fileID: 8929051885435631075, guid: 746408ac7eb609c4a87d0b2d7a6bc794, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10
+      value: 195.44446
       objectReference: {fileID: 0}
     - target: {fileID: 8929051885435631075, guid: 746408ac7eb609c4a87d0b2d7a6bc794, type: 3}
       propertyPath: m_LocalRotation.w

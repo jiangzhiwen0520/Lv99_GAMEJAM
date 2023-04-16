@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class LifeContorller : MonoBehaviour
 {
+    public GameObject suc;
+    public GameObject fai;
+
     // Start is called before the first frame update
     [Header("最大生命值")]
     public float maxHp;
@@ -19,9 +22,13 @@ public class LifeContorller : MonoBehaviour
         if (GameObject.FindGameObjectWithTag("Turmor") == null)
         {
             Debug.Log("手术成功，跳出结算界面");
+            suc.SetActive (true);
+            //GameObject.Find("手术台").SetActive(false);
         }
         if (m_hp == 0) { 
-            Debug.Log("患者死亡，手术失败，跳出失败界面"); 
+            Debug.Log("患者死亡，手术失败，跳出失败界面");
+            fai.SetActive(true);
+            //GameObject.Find("手术台").SetActive(false);
         }
     }
     public void LifeChange(float down)
