@@ -26,7 +26,7 @@ public class AngryState : MonoBehaviour
         if (aValue > 0 && aValue < 50)
         {
             
-            //GameObject.Find("AudioController").GetComponent<AudioController>().PlayAudio(0);
+            GameObject.Find("AudioController").GetComponent<AudioController>().PlayAudio(0);
             GameObject.Find("AS").GetComponent<SpriteRenderer>().enabled = false;
             GameObject.Find("AS").GetComponent<Angry>().enabled = false;
             GameObject.Find("AM").GetComponent<SpriteRenderer>().enabled = false;
