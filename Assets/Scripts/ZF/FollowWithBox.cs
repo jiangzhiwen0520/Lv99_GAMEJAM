@@ -17,6 +17,7 @@ public class FollowWithBox : MonoBehaviour
     {
 
         if(go!=null)
-            GetComponent<RectTransform>().position = Camera.main.WorldToScreenPoint(go.transform.position);
+            //GetComponent<RectTransform>().position = Camera.main.WorldToScreenPoint(go.transform.position);
+            transform.position =  Camera.main.WorldToScreenPoint(go.transform.position); 
     }
 }

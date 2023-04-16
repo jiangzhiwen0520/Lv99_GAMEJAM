@@ -38,7 +38,7 @@ public class Typing : MonoBehaviour
     {
         //isSpace = true;
         page = 1;
-        targetText = "Last year, I did not like my English class , Every class was like a bad dream, I just hid behind my textbook and never said anything. Then one day I watched an English  ";
+        targetText = "Last year, I did not like English class, Every class was like a bad dream, I just hid behind my textbook and never said anything. Then one day I watched an English  ";
         //firstLen = targetText.Length;
         currentCharIndex = 0;
         originalText.text = targetText;
@@ -84,7 +84,7 @@ public class Typing : MonoBehaviour
                 if (currentCharIndex == targetText.Length - 2)
                 {
                     page = 3;
-                    targetText = "everything the characters said, their body language and the expressions on their faces helped me to get the meaning, I also realized I could get the meaning by  ";
+                    targetText = "everything the characters said, their body language and the expressions on their faces helped me to get the meaning, I have loved English since then.  ";
                     originalText.text = targetText;
                     typedText.text = "";
                     currentCharIndex = 0;
@@ -182,7 +182,7 @@ public class Typing : MonoBehaviour
                 }
                 else
                 {
-                    if (page >= 1)
+                    if (page >= 3)
                     {
                         typedText.text += currentChar;
                         //Debug.Log("ÊäÈëÒÑÂú");
