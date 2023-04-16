@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,5 +22,14 @@ public class AudioController : MonoBehaviour
     public void PlayAudio(int i)
     {
         m_audioSource.PlayOneShot(audioClips[i]);
+    }
+    public void PlayAudio(int i,float a)
+    {
+        m_audioSource.PlayOneShot(audioClips[i],a);
+    }
+
+    internal void Stop()
+    {
+        throw new NotImplementedException();
     }
 }

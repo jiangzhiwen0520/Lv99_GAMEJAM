@@ -17,7 +17,7 @@ public class Camera1 : MonoBehaviour
     void Start()
     {
         noise = cvCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
-        cvCamera.m_Lens.OrthographicSize = 3f;
+        //cvCamera.m_Lens.OrthographicSize = 3f;
         noise.m_AmplitudeGain = 0f;
         nervous = 0.0f;
     }
@@ -25,7 +25,7 @@ public class Camera1 : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1))
+        /*if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1))
         {
             isStarted = true;
         }
@@ -36,8 +36,8 @@ public class Camera1 : MonoBehaviour
             nervous =GameObject.Find("PressureController").GetComponent<PreesureController>().GetPressurePoint();
         }
 
-        float disNervous = nervous - preNervous;
-       
+        float disNervous = nervous - preNervous;*/
+        nervous = GameObject.Find("PressureController").GetComponent<PreesureController>().GetPressurePoint();
         //cvCamera.m_Lens.OrthographicSize -= 0.02f * disNervous;
         //Debug.Log(cvCamera.m_Lens.OrthographicSize);
         if (nervous >= 50.0)
