@@ -62,6 +62,7 @@ public class Circle2 : MonoBehaviour
             pause = true;
             Time.timeScale = 0;
             gameOver.SetActive(true);
+            GameObject.Find("AudioController").GetComponent<AudioController>().PlayAudio(1,0.3f);
         }
     }
 
@@ -96,11 +97,12 @@ public class Circle2 : MonoBehaviour
 
         if (other.gameObject.tag.Equals("BallEnd"))
         {
-            Debug.Log("碰撞");
+            //Debug.Log("碰撞");
             Cursor.visible = true;
             isstart = false;
             pause = true;
             Time.timeScale = 0;
+            GameObject.Find("AudioController").GetComponent<AudioController>().PlayAudio(2);
             gameClear.SetActive(true);
         }
         else if (other.gameObject.tag.Equals("Border"))
@@ -110,6 +112,7 @@ public class Circle2 : MonoBehaviour
             pause = true;
             Time.timeScale = 0;
             gameOver.SetActive(true);
+            GameObject.Find("AudioController").GetComponent<AudioController>().PlayAudio(1, 0.3f);
         }
     }
     private void OnMouseOver()

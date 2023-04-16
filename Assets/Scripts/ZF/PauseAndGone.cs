@@ -20,11 +20,14 @@ public class PauseAndGone : MonoBehaviour
     }
     public void OnPauseClickDown()
     {
+        GameObject.Find("AudioController").GetComponent<AudioController>().PlayAudio(5);
+        GameObject.Find("Main Camera").GetComponent<AudioListener>().enabled = !GameObject.Find("Main Camera").GetComponent<AudioListener>().enabled;
         i = 1 - i;
         gameObject.GetComponent<Image>().sprite = sprites[i];
         Time.timeScale = 1 - Time.timeScale;
-        GameObject.Find("AudioController").GetComponent<AudioController>().PlayAudio(5);
 
+
+        //GameObject.Find("Main Camera").GetComponent<AudioListener>().enabled = false;
 
     }
     public void OnPauseClickUp()

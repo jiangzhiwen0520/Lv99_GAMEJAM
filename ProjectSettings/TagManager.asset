@@ -9,6 +9,7 @@ TagManager:
   - BallEnd
   - Border
   - Canvas
+  - Turmor
   layers:
   - Default
   - TransparentFX

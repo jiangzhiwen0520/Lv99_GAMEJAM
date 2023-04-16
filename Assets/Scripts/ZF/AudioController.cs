@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,7 +6,7 @@ using UnityEngine;
 public class AudioController : MonoBehaviour
 {
     // Start is called before the first frame update
-    [Header("ÒôÆµ×ÊÔ´Æ¬¶Î")]
+    [Header("ï¿½ï¿½Æµï¿½ï¿½Ô´Æ¬ï¿½ï¿½")]
     public AudioClip[] audioClips;
     private AudioSource m_audioSource;
     void Start()
@@ -26,6 +27,11 @@ public class AudioController : MonoBehaviour
     public void PlayAudio(int i,float a)
     {
         m_audioSource.PlayOneShot(audioClips[i],a);
+    }
+
+    internal void Stop()
+    {
+        throw new NotImplementedException();
 
     }
 }

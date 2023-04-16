@@ -22,10 +22,11 @@ public class VesselCut : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        if (Time.timeScale != 0)
+        if (Time.timeScale == 1)
         {
             m_lc.LifeChange(hpPoint);
             Vessel v = transform.parent.gameObject.GetComponent<Vessel>();
+            GameObject.Find("AudioController").GetComponent<AudioController>().PlayAudio(2);
             if (v != null) v.Cut();
             Destroy(gameObject);
         }

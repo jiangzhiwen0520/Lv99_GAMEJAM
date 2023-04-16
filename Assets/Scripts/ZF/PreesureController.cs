@@ -20,7 +20,7 @@ public class PreesureController : MonoBehaviour
     private float m_cdtime = 0;
     private bool m_cd;
     private bool m_breath;
-    private bool m_downcd;
+    private bool m_downcd, m_first;
 
     public bool isAP;
     void Start()
@@ -33,6 +33,7 @@ public class PreesureController : MonoBehaviour
         m_cd = false;
         m_breath = false;
         m_downcd = false;
+        m_first = true;
     }
     private void FixedUpdate()
     {
@@ -48,12 +49,15 @@ public class PreesureController : MonoBehaviour
     {
         if ((Input.GetKey(KeyCode.Space) || m_breath) && !m_cd&&!isAP)
         {
-            
             float pretime = m_downtime >= 1 ? m_downtime : 1;
             m_downtime += Time.deltaTime;
             if (m_downtime >= 1)//开始呼吸
             {
-                GameObject.Find("AudioController").GetComponent<AudioController>().PlayAudio(9);
+                if (m_first)
+                {
+                    GameObject.Find("AudioController").GetComponent<AudioController>().PlayAudio(9);
+                    m_first = false;
+                }
                 m_breath = true;
                 if (m_downtime >= 2) m_downtime = 2;
                 Award(descender * (m_downtime - pretime));//50点压力在1s时间里下降
@@ -65,10 +69,16 @@ public class PreesureController : MonoBehaviour
                 m_cd = true;
                 m_breath = false;
                 m_downtime = 0;
+                m_first = true;
             }
         }
         else
         {
+            /*if (m_downtime < 1) {
+                m_first = true;
+                GameObject.Find("AudioController").GetComponent<AudioSource>().Stop(); 
+            }*/
+            //GameObject.Find("AudioController").GetComponent<AudioSource>().Stop();
             m_downtime = 0;
             float pretime = m_uptime;
             m_uptime += Time.deltaTime;
