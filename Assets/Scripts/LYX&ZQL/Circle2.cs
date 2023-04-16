@@ -27,6 +27,7 @@ public class Circle2 : MonoBehaviour
         isstart = false; timeDown = false; pause = false;
         m_realtime = 30;
         m_time = 0;
+        timeDown = true;
     }
 
     void Update()
@@ -117,8 +118,7 @@ public class Circle2 : MonoBehaviour
         if ((Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1)) && !pause&&Time.timeScale!=0)
         {
             isstart = !isstart;
-            timeDown = true;
-            
+
         }
     }
 }
