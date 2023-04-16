@@ -18,11 +18,15 @@ public class Doki : MonoBehaviour
     {
         if (gameObject.GetComponent<PreesureController>().enabled)
         {
+            m_as.volume = 1;
             float n = GetComponent<PreesureController>().GetPressurePoint();
 
             m_as.pitch = 100 - n == 0 ? -2 : -1 - 0.01f * n;
         }
-        
+        else
+        {
+            m_as.volume = 0;
+        }
 
     }
 }

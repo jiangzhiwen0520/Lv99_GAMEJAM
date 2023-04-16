@@ -35,7 +35,7 @@ public class TeacherManager : MonoBehaviour
         StartCoroutine(GameObject.Find("CloseEyes").GetComponent<EyelidCloseEffect>().CloseEyelids(4));
 
         yield return new WaitForSeconds(time4);
-        GameObject.Find("AudioController").GetComponent<AudioController>().PlayAudio(1);
+        GameObject.Find("AudioController").GetComponent<AudioController>().PlayAudio(1,0.5f);
         yield return new WaitForSeconds(2f);
         GameObject.Find("AudioController").GetComponent<AudioController>().PlayAudio(4);
         Destroy(GameObject.Find("¿œ ¶"));

@@ -24,6 +24,8 @@ public class PauseAndGone : MonoBehaviour
         gameObject.GetComponent<Image>().sprite = sprites[i];
         Time.timeScale = 1 - Time.timeScale;
         GameObject.Find("AudioController").GetComponent<AudioController>().PlayAudio(5);
+
+
     }
     public void OnPauseClickUp()
     {

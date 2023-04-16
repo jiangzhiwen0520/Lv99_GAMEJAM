@@ -41,8 +41,8 @@ public class UIEye : MonoBehaviour
         {
             yield return new WaitForSeconds(2);
             StartCoroutine(GameObject.Find("CloseEyes").GetComponent<EyelidCloseEffect>().CloseEyelids(1));
-            yield return new WaitForSeconds(2);
-            StartCoroutine(GameObject.Find("CloseEyes").GetComponent<EyelidCloseEffect>().OpenEyelids(1));
+            yield return new WaitForSeconds(1);
+            StartCoroutine(GameObject.Find("CloseEyes").GetComponent<EyelidCloseEffect>().OpenEyelids(0.5f));
         }
         
         

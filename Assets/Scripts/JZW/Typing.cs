@@ -156,7 +156,7 @@ public class Typing : MonoBehaviour
 
                 Debug.Log(currentCharIndex);
                 Debug.Log(targetText.Length);
-                if (currentCharIndex < targetText.Length - 2)
+                if (currentCharIndex < targetText.Length - 3)
                 {
                     //Debug.Log("按下按键");
 
@@ -182,7 +182,7 @@ public class Typing : MonoBehaviour
                 }
                 else
                 {
-                    if (page >= 3)
+                    if (page >= 1)
                     {
                         typedText.text += currentChar;
                         //Debug.Log("输入已满");

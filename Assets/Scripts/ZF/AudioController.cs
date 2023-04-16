@@ -22,4 +22,10 @@ public class AudioController : MonoBehaviour
     {
         m_audioSource.PlayOneShot(audioClips[i]);
     }
+
+    public void PlayAudio(int i,float a)
+    {
+        m_audioSource.PlayOneShot(audioClips[i],a);
+
+    }
 }

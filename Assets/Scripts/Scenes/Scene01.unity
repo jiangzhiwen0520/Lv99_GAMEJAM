@@ -715,7 +715,7 @@ PrefabInstance:
     - target: {fileID: 2748090059010903839, guid: 59bbb9937f265194cbff434291920637, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 14a40097cc5c69448969957f04cd88ab, type: 3}
+      objectReference: {fileID: 8300000, guid: 9983c8b9c0fd3c246a3e5d523e6b265b, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59bbb9937f265194cbff434291920637, type: 3}
 --- !u!224 &265664556 stripped
@@ -2345,7 +2345,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1042718291}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db901f9cda4427844800d4d72b423461, type: 3}
   m_Name: 
@@ -3566,6 +3566,14 @@ PrefabInstance:
     - target: {fileID: 5251657247996366367, guid: e3bcdfcc751fa164287724d26f4fe1ee, type: 3}
       propertyPath: m_Name
       value: PressureController
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519562677862203186, guid: e3bcdfcc751fa164287724d26f4fe1ee, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519562677862203186, guid: e3bcdfcc751fa164287724d26f4fe1ee, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3bcdfcc751fa164287724d26f4fe1ee, type: 3}
