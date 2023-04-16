@@ -12,6 +12,7 @@ public class NextPanel : MonoBehaviour
     public string nextLevelScene;
     private void Awake()
     {
+        //GameObject.Find("Timer").SetActive(false);
         btn_nextLevel.onClick.AddListener(() =>
         {
             Debug.Log("ÏÂÒ»¹Ø");
@@ -29,13 +30,16 @@ public class NextPanel : MonoBehaviour
         });
         btn_quit.onClick.AddListener(() =>
         {
-            SceneManager.LoadScene("UI");
+            Scene scene = SceneManager.GetActiveScene();
+            nextLevelScene = scene.name;
+            SceneManager.LoadScene(nextLevelScene);
             Time.timeScale = 1;
         });
         btn_Back.onClick.AddListener(() =>
         {
             SceneManager.LoadScene("UI");
             Time.timeScale = 1;
+            
         });
     }
 }

@@ -7,11 +7,12 @@ using UnityEngine.UI;
 
 public class AgainPanel : MonoBehaviour
 {
-    public Button btn_nextLevel, btn_quit, btn_Back;
+    public Button btn_nextLevel, btn_Back;
     [Header("重新开始场景")]
     public string nextLevelScene;
     private void Awake()
     {
+        //GameObject.Find("Timer").SetActive(false);
         btn_nextLevel.onClick.AddListener(() =>
         {
             //Debug.Log("下一关");
@@ -27,12 +28,12 @@ public class AgainPanel : MonoBehaviour
             Time.timeScale = 1;
             SceneManager.LoadScene(nextLevelScene);
         });
-        btn_quit.onClick.AddListener(() =>
+        /*btn_quit.onClick.AddListener(() =>
         {
             Time.timeScale = 1;
             SceneManager.LoadScene("UI");
 
-        });
+        });*/
         btn_Back.onClick.AddListener(() =>
         {
             Time.timeScale = 1;
