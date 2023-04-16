@@ -31,16 +31,23 @@ public class TeacherManager : MonoBehaviour
         StartCoroutine(GameObject.Find("CloseEyes").GetComponent<EyelidCloseEffect>().OpenEyelids(1));
         yield return new WaitForSeconds(time3);
 
+        
         StartCoroutine(GameObject.Find("CloseEyes").GetComponent<EyelidCloseEffect>().CloseEyelids(4));
-        yield return new WaitForSeconds(time4);
-        Destroy(GameObject.Find("老师"));
 
+        yield return new WaitForSeconds(time4);
+        GameObject.Find("AudioController").GetComponent<AudioController>().PlayAudio(1);
+        yield return new WaitForSeconds(2f);
+        GameObject.Find("AudioController").GetComponent<AudioController>().PlayAudio(4);
+        Destroy(GameObject.Find("老师"));
+        yield return new WaitForSeconds(1.5f);
         GameObject.Instantiate(aTeacher, new Vector3(5.22f, 0.71f, 0f), Quaternion.identity);
+       
         StartCoroutine(GameObject.Find("CloseEyes").GetComponent<EyelidCloseEffect>().OpenEyelids(0.5f));
         yield return new WaitForSeconds(time5);
         GameObject.Find("PressureController").GetComponent<PreesureController>().enabled = true;
         GameObject.Find("生气老师(Clone)").GetComponent<PreesureController>().enabled = true;
         GameObject.Find("课本").GetComponent<Book>().enabled = true;
+        GameObject.Find("Typing").GetComponent<Typing>().enabled = true;
 
     }
 }

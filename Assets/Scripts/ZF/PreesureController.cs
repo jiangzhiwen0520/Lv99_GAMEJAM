@@ -53,6 +53,7 @@ public class PreesureController : MonoBehaviour
             m_downtime += Time.deltaTime;
             if (m_downtime >= 1)//开始呼吸
             {
+                GameObject.Find("AudioController").GetComponent<AudioController>().PlayAudio(9);
                 m_breath = true;
                 if (m_downtime >= 2) m_downtime = 2;
                 Award(descender * (m_downtime - pretime));//50点压力在1s时间里下降

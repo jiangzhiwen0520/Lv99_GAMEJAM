@@ -5,11 +5,15 @@ using UnityEngine.UI;
 
 public class AngryState : MonoBehaviour
 {
-    private float aValue;
+    public float aValue;
     public GameObject vPanel;
+    public bool isAni;
+    private bool state;
+    
     // Start is called before the first frame update
     void Start()
     {
+        isAni = false;
         vPanel = GameObject.Find("FailPanel");
         gameObject.GetComponent<PreesureController>().Punishment(50);
     }
@@ -21,6 +25,8 @@ public class AngryState : MonoBehaviour
         aValue= gameObject.GetComponent<PreesureController>().GetPressurePoint();
         if (aValue > 0 && aValue < 50)
         {
+            
+            //GameObject.Find("AudioController").GetComponent<AudioController>().PlayAudio(0);
             GameObject.Find("AS").GetComponent<SpriteRenderer>().enabled = false;
             GameObject.Find("AS").GetComponent<Angry>().enabled = false;
             GameObject.Find("AM").GetComponent<SpriteRenderer>().enabled = false;
@@ -30,6 +36,8 @@ public class AngryState : MonoBehaviour
         }
         else if (aValue < 100)
         {
+            //GameObject.Find("AudioController").GetComponent<AudioController>().PlayAudio(0);
+            
             GameObject.Find("AS").GetComponent<SpriteRenderer>().enabled = true;
             GameObject.Find("AS").GetComponent<Angry>().enabled = true;
             GameObject.Find("AM").GetComponent<SpriteRenderer>().enabled = false;
@@ -40,6 +48,8 @@ public class AngryState : MonoBehaviour
         }
         else if (aValue < 150)
         {
+
+            //GameObject.Find("AudioController").GetComponent<AudioController>().PlayAudio(0);
             GameObject.Find("AS").GetComponent<SpriteRenderer>().enabled = true;
             GameObject.Find("AS").GetComponent<Angry>().enabled = true;
             GameObject.Find("AM").GetComponent<SpriteRenderer>().enabled = true;
@@ -50,6 +60,7 @@ public class AngryState : MonoBehaviour
         }
         else if (aValue < 200)
         {
+            //GameObject.Find("AudioController").GetComponent<AudioController>().PlayAudio(0);
             GameObject.Find("AS").GetComponent<SpriteRenderer>().enabled = true;
             GameObject.Find("AS").GetComponent<Angry>().enabled = true;
             GameObject.Find("AM").GetComponent<SpriteRenderer>().enabled = true;
@@ -59,18 +70,30 @@ public class AngryState : MonoBehaviour
         }
         else if(aValue >= 200)
         {
+            GameObject.Find("AudioController").GetComponent<AudioController>().PlayAudio(8);
+            //GameObject.Find("AudioController").GetComponent<AudioController>().PlayAudio(0);
             for (int i = 0; i < vPanel.transform.childCount; i++)
             {
                 vPanel.transform.GetChild(i).GetComponent<Image>().enabled = true;
                 vPanel.transform.GetChild(i).GetComponent<Angry>().enabled = true;
 
+
                 GameObject.Find("PressureController").GetComponent<PreesureController>().Award(GameObject.Find("PressureController").GetComponent<PreesureController>().GetPressurePoint());
                 GameObject.Find("PressureController").GetComponent<PreesureController>().enabled = false;
                 gameObject.GetComponent<PreesureController>().Award(gameObject.GetComponent<PreesureController>().GetPressurePoint());
                 gameObject.GetComponent<PreesureController>().enabled = false;
-                
+                StartCoroutine(WaitAni());
             }
+
+            
+            
         }
 
+    }
+
+    private IEnumerator WaitAni()
+    {
+        yield return new WaitForSeconds(1);
+        isAni = true;
     }
 }

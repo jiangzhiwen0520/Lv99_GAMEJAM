@@ -13,33 +13,58 @@ public class NextPanel : MonoBehaviour
     private void Awake()
     {
         //GameObject.Find("Timer").SetActive(false);
+        
         btn_nextLevel.onClick.AddListener(() =>
         {
+            
             Debug.Log("ÏÂÒ»¹Ø");
             Scene scene = SceneManager.GetActiveScene();
             nextLevelScene = scene.name;
-            string s = nextLevelScene.Substring(0, nextLevelScene.Length - 1);
-            string l = nextLevelScene.Substring(nextLevelScene.Length - 1, 1);
-            nextLevelScene = s + (Convert.ToInt32(l) + 1);
-            if (nextLevelScene.Equals("Scene_05"))
+            if (nextLevelScene.Equals("UI"))
             {
-                nextLevelScene = "Scene_04";
+                SceneManager.LoadScene("Scene01");
             }
-            SceneManager.LoadScene(nextLevelScene);
+            else
+            {
+                string s = nextLevelScene.Substring(0, nextLevelScene.Length - 1);
+                string l = nextLevelScene.Substring(nextLevelScene.Length - 1, 1);
+                nextLevelScene = s + (Convert.ToInt32(l) + 1);
+                if (nextLevelScene.Equals("Scene05"))
+                {
+                    nextLevelScene = "Scene04";
+                }
+                SceneManager.LoadScene(nextLevelScene);
+
+            }
+           
             Time.timeScale = 1;
         });
-        btn_quit.onClick.AddListener(() =>
+        if (btn_quit != null)
         {
-            Scene scene = SceneManager.GetActiveScene();
-            nextLevelScene = scene.name;
-            SceneManager.LoadScene(nextLevelScene);
-            Time.timeScale = 1;
-        });
+            btn_quit.onClick.AddListener(() =>
+            {
+                Scene scene = SceneManager.GetActiveScene();
+                nextLevelScene = scene.name;
+                SceneManager.LoadScene(nextLevelScene);
+                Time.timeScale = 1;
+            });
+        }
+        
         btn_Back.onClick.AddListener(() =>
         {
-            SceneManager.LoadScene("UI");
-            Time.timeScale = 1;
             
+            Scene scene = SceneManager.GetActiveScene();
+            nextLevelScene = scene.name;
+            if (nextLevelScene.Equals("UI"))
+            {
+                UnityEngine.Application.Quit();
+            }
+            else 
+            {
+                SceneManager.LoadScene("UI");
+                Time.timeScale = 1;
+            }
+
         });
     }
 }
