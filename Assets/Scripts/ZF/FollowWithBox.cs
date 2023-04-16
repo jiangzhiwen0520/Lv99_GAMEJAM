@@ -5,9 +5,9 @@ using UnityEngine;
 public class FollowWithBox : MonoBehaviour
 {
     //text预制体
-    public GameObject TextType;
+    //public GameObject TextType;
     //生成text的引用对象
-    //private GameObject go;
+    public GameObject go;
     // Start is called before the first frame update
     private void Start()
     {
@@ -16,6 +16,7 @@ public class FollowWithBox : MonoBehaviour
     private void Update()
     {
 
-        TextType.transform.position = Camera.main.WorldToScreenPoint(transform.position);
+        if(go!=null)
+            GetComponent<RectTransform>().position = Camera.main.WorldToScreenPoint(go.transform.position);
     }
 }
