@@ -29,11 +29,11 @@ public class Typing : MonoBehaviour
     private int firstLen;
     private int page;
 
-    private bool isSpace;
+    //private bool isSpace;
     // Start is called before the first frame update
     void Start()
     {
-        isSpace = true;
+        //isSpace = true;
         page = 1;
         targetText = "Last year, I did not like my English class , Every class was like a bad dream, I just hid behind my textbook and never said anything. Then one day I watched an English  ";
         //firstLen = targetText.Length;
@@ -133,7 +133,7 @@ public class Typing : MonoBehaviour
             pressureController.GetComponent<PreesureController>().Award(2);
             if (GameObject.Find("生气老师(Clone)") != null)
             {
-                GameObject.Find("生气老师(Clone)").GetComponent<PreesureController>().Award(30);
+                GameObject.Find("生气老师(Clone)").GetComponent<PreesureController>().Award(6);
             }
 
             Debug.Log(currentCharIndex);
