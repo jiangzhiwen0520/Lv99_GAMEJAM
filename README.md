@@ -12,7 +12,7 @@
 在第一关中，玩家扮演的是一个上课打瞌睡的学生，被老师叫去朗读课文。操作方法是在课本上输入相应的字母（不需要输入空格）。注意： 玩家在游戏中会越来越紧张，必须按住空格深吸一口气才能缓解。
 
 <p align="center">
-  <img src="https://img.itch.zone/aW1hZ2UvMjAzMzU0OS8xMTk2MDE3Ni5wbmc=/794x1000/BteOg4.png">
+  <img src="![image](https://user-images.githubusercontent.com/34395816/234580625-a3bd413f-9098-4cb3-85b1-3dfce7227a91.png)">
 </p>
 
 在第二关中，玩家扮演的是拆弹警察。操作方法是左键点击球，将其从起点移动到终点。而且不能碰到墙。注意： 玩家在游戏中会越来越紧张，你必须按住空格深呼吸来缓解它。
