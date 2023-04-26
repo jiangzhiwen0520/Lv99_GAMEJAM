@@ -2,7 +2,7 @@
 ## 数码奇迹-DONT WORRY AND TAKE A DEEP BREATH
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/34395816/234573958-cafa29dc-c956-4084-ae93-66d5036d97ff.png">
+  <img src="![image](https://user-images.githubusercontent.com/34395816/234573958-cafa29dc-c956-4084-ae93-66d5036d97ff.png)">
 </p>
 
 游戏的总体主题可以概括为：面对当前的困难，不要紧张，深呼吸，然后勇敢地放手。
