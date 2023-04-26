@@ -2,7 +2,7 @@
 ## 数码奇迹-DONT WORRY AND TAKE A DEEP BREATH
 
 <p align="center">
-  <img src="![image](https://user-images.githubusercontent.com/34395816/234573958-cafa29dc-c956-4084-ae93-66d5036d97ff.png)">
+  <img src="https://user-images.githubusercontent.com/34395816/234573958-cafa29dc-c956-4084-ae93-66d5036d97ff.png">
 </p>
 
 游戏的总体主题可以概括为：面对当前的困难，不要紧张，深呼吸，然后勇敢地放手。
@@ -12,7 +12,7 @@
 在第一关中，玩家扮演的是一个上课打瞌睡的学生，被老师叫去朗读课文。操作方法是在课本上输入相应的字母（不需要输入空格）。注意： 玩家在游戏中会越来越紧张，必须按住空格深吸一口气才能缓解。
 
 <p align="center">
-  <img src="![image](https://user-images.githubusercontent.com/34395816/234580625-a3bd413f-9098-4cb3-85b1-3dfce7227a91.png)">
+  <img src="https://user-images.githubusercontent.com/34395816/234580625-a3bd413f-9098-4cb3-85b1-3dfce7227a91.png">
 </p>
 
 在第二关中，玩家扮演的是拆弹警察。操作方法是左键点击球，将其从起点移动到终点。而且不能碰到墙。注意： 玩家在游戏中会越来越紧张，你必须按住空格深呼吸来缓解它。
