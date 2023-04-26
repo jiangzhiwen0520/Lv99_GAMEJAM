@@ -1,14 +1,18 @@
 # Lv99_GAMEJAM
-Lv.99 GameJam 数码奇迹-DONT WORRY AND TAKE A DEEP BREATH
-![微信图片_20230416171836](https://user-images.githubusercontent.com/34395816/234573958-cafa29dc-c956-4084-ae93-66d5036d97ff.png)
-The overall theme of the game can be summarized as: facing the current difficulties, don't be nervous, take a deep breath, and then bravely let go.
+## 数码奇迹-DONT WORRY AND TAKE A DEEP BREATH
 
-In order to convey this message appropriately. The game features four "tense challenges in life" designed in a joyful and exaggerated style, and each level is matched with unique gameplay that matches the situation.
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/34395816/234573958-cafa29dc-c956-4084-ae93-66d5036d97ff.png">
+</p>
 
-In the first level, the player plays the role of a student who dozes off during class and is called upon by the teacher to read the text aloud. The operation method is to input the corresponding letters in the textbook (no spaces need to be entered). Attention: Players will become increasingly nervous in the game, and you must press and hold the space to take a deep breath to relieve it.
+游戏的总体主题可以概括为：面对当前的困难，不要紧张，深呼吸，然后勇敢地放手。
 
-In the second level, the player plays the role of a bomb disposal police officer. The operation method is to left click on the ball and move it from the starting point to the endpoint. And it should not touch the wall. Attention: Players will become increasingly nervous in the game, and you must press and hold the space to take a deep breath to relieve it.
+为了恰当地传达这一信息。游戏以欢乐和夸张的风格设计了四个 "生活中的紧张挑战"，每个关卡都有与之匹配的独特玩法。
 
-In the third level, the player plays the role of a doctor performing surgery. The operation method is to left click to remove the purple blood vessels, and then cut off the purple blood vessels around the tumor to eliminate the tumor. Pass the test after eliminating two tumors. Attention: Players will become increasingly nervous in the game, and you must press and hold the space to take a deep breath to relieve it.
+在第一关中，玩家扮演的是一个上课打瞌睡的学生，被老师叫去朗读课文。操作方法是在课本上输入相应的字母（不需要输入空格）。注意： 玩家在游戏中会越来越紧张，必须按住空格深吸一口气才能缓解。
 
-In the fourth level, the player plays the role of an Olympic archer. The method of archery is to press and hold the left button until the target turns green and then release it. Attention: Players will become increasingly nervous in the game, and you must press and hold the space to take a deep breath to relieve it. 
+在第二关中，玩家扮演的是拆弹警察。操作方法是左键点击球，将其从起点移动到终点。而且不能碰到墙。注意： 玩家在游戏中会越来越紧张，你必须按住空格深呼吸来缓解它。
+
+在第三关中，玩家扮演的是一个做手术的医生。操作方法是左键点击切除紫色血管，然后切断肿瘤周围的紫色血管，消除肿瘤。消灭两个肿瘤后通过测试。注意： 玩家在游戏中会越来越紧张，你必须按住空格深呼吸来缓解。
+
+在第四关中，玩家扮演的是一名奥运射手。射箭的方法是按住左键，直到目标变成绿色，然后释放。注意： 玩家在游戏中会越来越紧张，你必须按住空格深呼吸来缓解。
